@@ -20,16 +20,27 @@ public class ShapeClient
       int startY = 250;
       
       Circle c = new Circle(startX, startY, startX/3, Color.BLUE);
+      Rectangle r = new Rectangle(startX * 5, startY, Color.BLUE);
+      Triangle t = new Triangle(startX * 3, startY, Color.BLUE);
       
       c.draw(g);
-      printInfo(c);
+      r.draw(g);
+      t.draw(g);
+      printInfo(c,r,t);
     } 
     
-    public static void printInfo(Shape s){
+    public static void printInfo(Shape s, Shape r, Shape t){
         System.out.println("The shape is : " + s);
         System.out.println("area : " + s.area() );
         System.out.println("perimeter : " + s.perimeter() );
+        System.out.println("The shape is : " + r);
+        System.out.println("area : " + r.area() );
+        System.out.println("perimeter : " + r.perimeter() );
+        System.out.println("The shape is : " + t);
+        System.out.println("area : " + t.area() );
+        System.out.println("perimeter : " + t.perimeter() );
     }
+    
     
     
 }

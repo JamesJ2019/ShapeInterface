@@ -8,7 +8,7 @@ public class Triangle implements Shape
     private Color c;
     private int leg1;
     private int leg2;
-    public Triangle(int x, int y, double radius, Color c)
+    public Triangle(int x, int y, Color c)
     {
         // initialise instance variables
         this.x = x;
@@ -22,7 +22,9 @@ public class Triangle implements Shape
 
     public void draw(Graphics g){
         g.setColor(c);
-        g.fill
+        g.fillPolygon(new int [] {50,50,30}, new int [] {100,100, 80},3);
+        String perArea = "Perim: " + String.format("%.3f", perimeter()) + " Area: " + String.format("%.3f",area());
+        g.drawString( perArea, x, y -10);
     }
  
     public double perimeter(){

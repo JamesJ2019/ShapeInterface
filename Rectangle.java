@@ -8,19 +8,21 @@ public class Rectangle implements Shape
     private int width;
     
     
-    public Rectangle(int x, int y, double radius, Color c)
+    public Rectangle(int x, int y, Color c)
     {
         this.x = x;
         this.y = y;
         this.radius = radius;
         this.c = c;
-        this.length = length;
-        this.width = width;
+        this.length = 150;
+        this.width =  100;
     }
 
     public void draw(Graphics g){
         g.setColor(c);
-        g.fillRect(x, y, width, length);
+        g.fillRect(x, y,width,length);
+        String perArea = "Perim: " + String.format("%.3f", perimeter()) + " Area: " + String.format("%.3f",area());
+        g.drawString( perArea, x, y -10);
     }
 
     public double perimeter(){
