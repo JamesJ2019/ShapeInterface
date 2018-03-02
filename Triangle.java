@@ -22,7 +22,7 @@ public class Triangle implements Shape
 
     public void draw(Graphics g){
         g.setColor(c);
-        g.fillPolygon(new int [] {50,50,30}, new int [] {100,100, 80},3);
+        g.fillPolygon(new int [] {150 + x,x - 50,150 + x}, new int [] {y,y + 100,y + 100},3);
         String perArea = "Perim: " + String.format("%.3f", perimeter()) + " Area: " + String.format("%.3f",area());
         g.drawString( perArea, x, y -10);
     }
